@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Ensure links appear clickable despite no href */
+a {
+    cursor: pointer;
+}
+
+/* Thin top bar, blue background */
+header {
+    background-color: #576A8F;
+    width: 100vw;
+    min-height: 60px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Container for header links */
+header nav {
+    display: flex;
+    gap: clamp(15px, 3vw, 40px);
+    padding-right: clamp(15px, 2vw, 30px);
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(14px, 1.6vw, 20px);
+}
+
+/* Decrease text opacity on hover for both nav bars */
+header nav a:hover, .main-nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Larger, main nav bar */
+.main-nav {
+    width: 100%;
+    min-height: 120px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-nav .logo {
+    max-height: 100px;
+    height: auto;
+    max-width: 200px;
+    margin-left: clamp(15px, 2vw, 30px);
+}
+
+/* Container for main nav bar links */
+.main-nav-links {
+    display: flex;
+    gap: clamp(20px, 4vw, 60px);
+    padding-right: clamp(15px, 2vw, 30px);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.main-nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+/* Container for central text and promo image */
+.center-container {
+    width: 65vw;
+    height: 50vh;
+    margin-left: 17.5vw;
+    margin-top: 10vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* Two halves of center-container */
+.center-text, .center-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-text {
+    flex-direction: column;
+}
+
+.center-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.center-text p {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.center-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Mobile phone responsiveness */
+@media (max-width: 480px) {
+    /* Center header nav */
+    header {
+        min-height: 50px;
+        justify-content: center;
+    }
+    header nav {
+        gap: 15px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /* Stack vertically and centered */
+    .main-nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Make logo smaller */
+    .main-nav .logo {
+        max-height: 60px;
+        margin-left: 0;
+    }
+
+    /* Space nav links tighter and centered */
+    .main-nav-links {
+        gap: 10px;
+        padding: 0 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Fix text at 12px to prevent overflow */
+    .main-nav-links a {
+        font-size: 12px;
+    }
+
+    /* Stack text and image vertically */
+    .center-container {
+        width: 90vw;
+        height: auto;
+        margin-left: 5vw;
+        margin-top: 5vh;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Full width for both halves */
+    .center-text, .center-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Reduce text size */
+    .center-text h1 {
+        font-size: 32px;
+    }
+    .center-text p {
+        font-size: 16px;
+    }
+}
+
