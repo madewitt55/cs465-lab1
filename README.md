@@ -2,12 +2,12 @@
 
 ---
 
-- **Your Name**: _Put your name here_
-- **GitHub Username**:  _Put your GitHub username here_
-- **Repository URL**: _Put the URL of your GitHub Classroom Lab1 URL here_
-- **Date Submitted**: _Put the date you submitted the final version here in this format: YYYY-MM-DD_
-- **Collaborators**: _List any collaborators here (if none, write "None")_
-- **Comments**: _Add any comments you have for the instructor about the assignment._
+- **Your Name**: Mason DeWitt
+- **GitHub Username**:  madewitt55
+- **Repository URL**: https://github.com/CS-465-SNHU/lab1-html-and-css-madewitt55
+- **Date Submitted**: 2026-02-01
+- **Collaborators**: None
+- **Comments**: N/A
 
 ---
 
