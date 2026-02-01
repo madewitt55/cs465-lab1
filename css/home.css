@@ -7,6 +7,8 @@ body {
     padding: 0;
     font-family: "Oswald", sans-serif;
     overflow-x: hidden;
+
+    background-color: #f6f5f2;
 }
 
 /* Ensure links appear clickable despite no href */
@@ -34,15 +36,15 @@ header {
 /* Container for header links */
 header nav {
     display: flex;
-    gap: clamp(15px, 3vw, 40px);
-    padding-right: clamp(15px, 2vw, 30px);
+    gap: 30px;
+    padding-right: 30px;
     flex-wrap: wrap;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
-    font-size: clamp(14px, 1.6vw, 20px);
+    font-size: 18px;
 }
 
 /* Decrease text opacity on hover for both nav bars */
@@ -66,14 +68,14 @@ header nav a:hover, .main-nav-links a:hover {
     max-height: 100px;
     height: auto;
     max-width: 200px;
-    margin-left: clamp(15px, 2vw, 30px);
+    margin-left: 30px;
 }
 
 /* Container for main nav bar links */
 .main-nav-links {
     display: flex;
-    gap: clamp(20px, 4vw, 60px);
-    padding-right: clamp(15px, 2vw, 30px);
+    gap: 40px;
+    padding-right: 30px;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
@@ -81,15 +83,14 @@ header nav a:hover, .main-nav-links a:hover {
 .main-nav-links a {
     color: black;
     text-decoration: none;
-    font-size: clamp(16px, 1.5vw, 24px);
+    font-size: 20px;
 }
 
 /* Container for central text and promo image */
 .center-container {
-    width: 65vw;
-    height: 50vh;
-    margin-left: 17.5vw;
-    margin-top: 10vh;
+    max-width: 1000px;
+    height: 400px;
+    margin: 80px auto 0;
 
     display: flex;
     flex-direction: row;
@@ -129,7 +130,7 @@ header nav a:hover, .main-nav-links a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 40px;
     gap: 15px;
 }
 
@@ -164,9 +165,8 @@ header nav a:hover, .main-nav-links a:hover {
 .display-container {
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
-    width: 65vw;
-    margin-left: 17.5vw;
+    margin: 40px auto 0;
+    max-width: 1000px;
 }
 
 .display-container h2 {
@@ -219,7 +219,50 @@ header nav a:hover, .main-nav-links a:hover {
     margin: 0;
 }
 
-/* Mobile phone responsiveness */
+/* Footer */
+footer {
+    background-color: #576A8F;
+    width: 100vw;
+    min-height: 50px;
+    margin-top: 60px;
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer p {
+    background-color: #323f59;
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Mobile device responsiveness */
 @media (max-width: 480px) {
     /* Center header nav */
     header {
@@ -259,10 +302,9 @@ header nav a:hover, .main-nav-links a:hover {
 
     /* Stack text and image vertically */
     .center-container {
-        width: 90vw;
+        width: 90%;
         height: auto;
-        margin-left: 5vw;
-        margin-top: 5vh;
+        margin: 40px auto 0;
         flex-direction: column;
         gap: 20px;
     }
@@ -282,7 +324,7 @@ header nav a:hover, .main-nav-links a:hover {
     }
 
     .search-container input {
-        width: 70vw;
+        width: 70%;
         height: 40px;
         padding: 0 15px;
         font-size: 14px;
@@ -295,9 +337,8 @@ header nav a:hover, .main-nav-links a:hover {
 
     /* Adjust display container for mobile */
     .display-container {
-        width: 90vw;
-        margin-left: 5vw;
-        margin-top: 3vh;
+        width: 90%;
+        margin: 30px auto 0;
     }
 
     .display-container h2 {
@@ -325,6 +366,22 @@ header nav a:hover, .main-nav-links a:hover {
     /* Product name */
     .product-item h3 {
         font-size: 16px;
+    }
+
+    /* Footer mobile responsiveness */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 90%;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 10px;
     }
 }
 
